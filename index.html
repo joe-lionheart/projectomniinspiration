@@ -1,112 +1,120 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projekt Omniinspiration - Cheaper Than A Bullet</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Open Sans',sans-serif;background:#e8e8e8;color:#333;line-height:1.8}
-.navbar{background:#f5f5f5;padding:1rem 2rem;display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;border-bottom:1px solid #ddd}
-.navbar a{color:#2d5a3d;text-decoration:none;font-weight:600}
-.navbar a:hover{color:#d4a000}
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:4rem 2rem;background:linear-gradient(to bottom,#e8e8e8,#f0f0f0);position:relative}
-.hero-video{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:50%;max-width:500px;z-index:0;opacity:0.85;pointer-events:none}
-.golden-lungs{width:350px;max-width:80%;margin-bottom:2rem;z-index:1;position:relative}
-.hero h1{font-family:'Playfair Display',serif;font-size:3.5rem;color:#2d5a3d;text-transform:uppercase;letter-spacing:10px;z-index:1}
-.hero h2{font-family:'Playfair Display',serif;font-size:2.5rem;color:#2d5a3d;text-transform:uppercase;letter-spacing:6px;z-index:1}
-section{padding:4rem 2rem;max-width:900px;margin:0 auto}
-h3{font-family:'Playfair Display',serif;font-size:1.8rem;color:#2d5a3d;margin-bottom:1.5rem;font-style:italic}
-p{margin-bottom:1.5rem;font-size:1.1rem}
-.hashtag{color:#2d5a3d;font-weight:bold}
-.cycle-section{text-align:center;padding:4rem 2rem;background:#f5f5f5}
-.cycle-image{max-width:100%;width:500px;margin:2rem auto;display:block}
-.dev-section{background:#2d5a3d;color:#fff;padding:4rem 2rem;text-align:center}
-.dev-section h3{color:#d4a000}
-.dev-section a{color:#d4a000}
-.mental-health{background:#f0f0f0;padding:4rem 2rem;text-align:center}
-.resources{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-top:2rem}
-.card{background:#fff;padding:2rem;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.1);min-width:220px}
-.card h4{color:#2d5a3d;margin-bottom:1rem}
-.card a{color:#d4a000}
-.gofundme{background:#d4a000;text-align:center;padding:4rem 2rem}
-.gofundme h3{color:#fff;font-size:2rem}
-.gofundme-btn{display:inline-block;background:#2d5a3d;color:#fff;padding:1rem 3rem;text-decoration:none;font-weight:bold;border-radius:4px;margin-top:1rem}
-.quote-section{text-align:center;padding:4rem 2rem}
-.quote-section blockquote{font-family:'Playfair Display',serif;font-size:1.6rem;font-style:italic;color:#2d5a3d}
-.footer{background:#333;color:#fff;padding:3rem 2rem;text-align:center}
-.footer a{color:#d4a000;margin:0 1rem}
-@media(max-width:768px){.hero h1{font-size:2rem}.hero h2{font-size:1.5rem}.navbar{gap:1rem}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt Omniinspiration - Cheaper Than A Bullet</title>
+    <link href="https://fonts.cdnfonts.com/css/goudy-stout" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Open Sans',sans-serif;background:#e8e8e8;color:#333;line-height:1.8}
+        .navbar{background:#f5f5f5;padding:1rem 2rem;display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;border-bottom:1px solid #ddd}
+        .navbar a{color:#2d5a3d;text-decoration:none;font-size:1rem;font-weight:600}
+        .navbar a:hover{color:#70AD47}
+        .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:4rem 2rem;position:relative;background:linear-gradient(to bottom,#e8e8e8,#f0f0f0)}
+        .hero-video{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:55%;max-width:550px;z-index:0;opacity:0.9;pointer-events:none}
+        .golden-lungs{width:380px;max-width:80%;margin-bottom:2rem;z-index:1;position:relative}
+        .hero h1{font-family:'Goudy Stout',serif;font-size:3.5rem;color:#70AD47;text-transform:uppercase;letter-spacing:8px;margin-bottom:0.5rem;z-index:1;position:relative;text-shadow:2px 2px 4px rgba(255,255,255,0.8)}
+        .hero h2{font-family:'Goudy Stout',serif;font-size:2.5rem;color:#70AD47;text-transform:uppercase;letter-spacing:6px;z-index:1;position:relative;text-shadow:2px 2px 4px rgba(255,255,255,0.8)}
+        section{padding:4rem 2rem;max-width:900px;margin:0 auto}
+        h3{font-family:'Open Sans',sans-serif;font-size:1.6rem;color:#2d5a3d;margin-bottom:1.5rem;font-weight:600}
+        p{margin-bottom:1.5rem;font-size:1.05rem;text-align:justify;color:#333}
+        .hashtag{color:#2d5a3d;font-weight:bold}
+        .cycle-section{text-align:center;padding:4rem 2rem;background:#f5f5f5;max-width:100%}
+        .cycle-section h3,.cycle-section p{max-width:900px;margin:0 auto 1.5rem}
+        .cycle-section p{text-align:center}
+        .cycle-image{max-width:100%;width:500px;margin:2rem auto}
+        #atemtracking .quote{text-align:center;font-style:italic;color:#666;margin-top:2rem}
+        .developer-section{background:#2d5a3d;color:#fff;padding:4rem 2rem;text-align:center;max-width:100%}
+        .developer-section h3{color:#70AD47}
+        .developer-section p{color:#fff;text-align:center;max-width:700px;margin:0 auto 1.5rem}
+        .developer-section a{color:#70AD47;text-decoration:none}
+        .mental-health{background:#f0f0f0;padding:4rem 2rem;text-align:center;max-width:100%}
+        .mental-health h3{color:#2d5a3d;font-size:1.8rem}
+        .mental-health .subtitle{color:#666;font-size:1.2rem;margin-bottom:2rem}
+        .resources{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-top:2rem}
+        .resource-card{background:#fff;padding:2rem;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.1);min-width:250px}
+        .resource-card h4{color:#2d5a3d;margin-bottom:1rem}
+        .resource-card a{color:#70AD47}
+        .gofundme{background:#d4a000;color:#fff;text-align:center;padding:4rem 2rem;max-width:100%}
+        .gofundme h3{color:#fff;font-size:1.8rem}
+        .gofundme p{color:#fff;text-align:center}
+        .gofundme-btn{display:inline-block;background:#2d5a3d;color:#fff;padding:1rem 3rem;text-decoration:none;font-weight:bold;border-radius:4px;margin-top:1rem}
+        .gofundme-btn:hover{background:#1a3d28}
+        .quote-section{text-align:center;padding:4rem 2rem;background:#e8e8e8}
+        .quote-section blockquote{font-size:1.5rem;font-style:italic;color:#2d5a3d}
+        .footer{background:#333;color:#fff;padding:3rem 2rem;text-align:center}
+        .footer a{color:#70AD47;margin:0 1rem}
+        .footer .copyright{margin-top:2rem;color:#888}
+        @media(max-width:768px){.hero h1{font-size:2rem;letter-spacing:4px}.hero h2{font-size:1.3rem;letter-spacing:2px}.navbar{gap:1rem}.navbar a{font-size:0.85rem}}
+    </style>
 </head>
 <body>
-<nav class="navbar">
-<a href="#home">Projekt Omniinspiration</a>
-<a href="#atemtracking">Atemtracking Via Audio</a>
-<a href="#entstehung">Ueber die Entstehung</a>
-</nav>
-<section class="hero" id="home">
-<video id="heroVideo" class="hero-video" muted playsinline><source src="Goldilungsvid2.mp4" type="video/mp4"></video>
-<img src="goldylungs.png" alt="Golden Lungs" class="golden-lungs" id="staticLungs">
-<h1>Project</h1>
-<h2>Omniinspiration</h2>
-</section>
-<section id="entstehung">
-<h3>Depressionen sind heilbar.</h3>
-<p>Leider bewegt sich bislang die Effektivitaet von Antidepressiva mehreren Studien zufolge etwa im gleichen Wirkungsbereich wie dem von Placebos.</p>
-<p>Wesentlich staerkere positive Effekte haben Ergotherapeutisch-/Sportliche-Programme sowie Achtsamkeit-/Meditationstrainings vorzuweisen.</p>
-<p>Was folgt, ist der Versuch ueber eine Moeglichkeit der Depressionsbekaempfung zu informieren, die nicht nur effektiv, sondern gleichzeitig <span class="hashtag">#cheaperthanabullet</span> ist.</p>
-</section>
-<section class="cycle-section">
-<h3>Der negative Kreislauf</h3>
-<p>Depressionen stehen im Zusammenhang mit einem Teufelskreis:</p>
-<img src="NegativSpirale1.png" alt="Negativer Kreislauf" class="cycle-image">
-</section>
-<section id="atemtracking">
-<h3>Atemtracking Via Audio</h3>
-<p>Unsere Technologie nutzt das Mikrofon Ihres Smartphones, um Ihre Atemmuster zu analysieren - ohne spezielle Hardware.</p>
-<p style="text-align:center;font-style:italic;color:#666">"Giving mankind a fish vs teaching it to breathe"</p>
-</section>
-<section class="dev-section">
-<h3>Softwareentwickler gesucht</h3>
-<p>Wir suchen leidenschaftliche Entwickler mit Erfahrung in Audio-Processing, Machine Learning oder Mobile Development.</p>
-<p><a href="mailto:cheaperthanabullet@tutanota.com">cheaperthanabullet@tutanota.com</a></p>
-</section>
-<section class="mental-health">
-<h3>Sei mutig und nimm Hilfe an</h3>
-<p style="color:#2d5a3d;font-weight:bold">Du bist nicht allein</p>
-<div class="resources">
-<div class="card"><h4>Telefonseelsorge</h4><p>0800 111 0 111</p><p style="color:#888">Kostenlos, 24/7</p></div>
-<div class="card"><h4>Online-Beratung</h4><a href="https://online.telefonseelsorge.de">online.telefonseelsorge.de</a></div>
-<div class="card"><h4>Deutsche Depressionshilfe</h4><a href="https://www.deutsche-depressionshilfe.de">deutsche-depressionshilfe.de</a></div>
-</div>
-</section>
-<section class="gofundme">
-<h3>Unterstuetze das Projekt</h3>
-<p style="color:#fff">Hilf uns, diese lebensrettende Technologie zu entwickeln.</p>
-<a href="https://gofund.me/a6e22175" class="gofundme-btn" target="_blank">Zum GoFundMe</a>
-</section>
-<section class="quote-section">
-<blockquote>"Giving mankind a fish vs teaching it to breathe"</blockquote>
-</section>
-<footer class="footer">
-<h4>Kontakt</h4>
-<p><a href="mailto:cheaperthanabullet@tutanota.com">cheaperthanabullet@tutanota.com</a><a href="tel:+492204-5067746">+49 2204-5067746</a></p>
-<p style="margin-top:2rem;color:#888">2024 Projekt Omniinspiration</p>
-</footer>
-<script>
-const video=document.getElementById('heroVideo');
-const lungs=document.getElementById('staticLungs');
-if(video){video.style.display='block';lungs.style.display='none';
-window.addEventListener('scroll',function(){
-const st=window.pageYOffset;
-const dh=document.documentElement.scrollHeight-window.innerHeight;
-const sp=st/dh;
-if(video.duration){video.currentTime=Math.min(sp*2,1)*video.duration}
-const hh=document.querySelector('.hero').offsetHeight;
-video.style.opacity=st>hh*0.5?Math.max(0,1-(st-hh*0.5)/(hh*0.5)):0.85;
-});}
-</script>
+    <nav class="navbar">
+        <a href="#home">Projekt Omniinspiration</a>
+        <a href="#atemtracking">Atemtracking Via Audio</a>
+        <a href="#entstehung">Ueber die Entstehung</a>
+        <a href="#sangha">Sangha Buddah</a>
+        <a href="#vollendung">Vollendung</a>
+    </nav>
+    <section class="hero" id="home">
+        <video id="heroVideo" class="hero-video" muted playsinline><source src="Goldilungsvid2.mp4" type="video/mp4"></video>
+        <img src="goldylungs.png" alt="Golden Lungs" class="golden-lungs" id="staticLungs">
+        <h1>Project</h1>
+        <h2>Omniinspiration</h2>
+    </section>
+    <section id="entstehung">
+        <h3>Depressionen sind heilbar.</h3>
+        <p>Leider bewegt sich bislang die Effektivitaet von Antidepressiva mehreren Studien zufolge etwa im gleichen Wirkungsbereich wie dem von Placebos.</p>
+        <p>Wesentlich staerkere positive Effekte haben Ergotherapeutisch-/Sportliche-Programme sowie Achtsamkeit-/Meditationstrainings vorzuweisen.</p>
+        <p>Was folgt, ist der Versuch ueber eine Moeglichkeit der Depressionsbekaempfung zu informieren, die nicht nur effektiv, sondern gleichzeitig <span class="hashtag">#cheaperthanabullet</span> ist.</p>
+    </section>
+    <section class="cycle-section">
+        <h3>Der negative Kreislauf</h3>
+        <p>Depressionen stehen im Zusammenhang mit einem Teufelskreis:</p>
+        <img src="NegativSpirale1.png" alt="Negativer Kreislauf der Depression" class="cycle-image">
+        <p><strong>Low Serotonin → Emotional Stress → Strained Breath → Low Blood Oxygen → Low Serotonin...</strong></p>
+    </section>
+    <section id="atemtracking">
+        <h3>Atemtracking Via Audio</h3>
+        <p>Unsere Technologie nutzt das Mikrofon Ihres Smartphones, um Ihre Atemmuster zu analysieren - ohne spezielle Hardware, ohne teure Sensoren.</p>
+        <p>Die App erkennt, wann Sie flach atmen, und gibt Ihnen sanfte Hinweise, um zu tieferer, gesuenderer Atmung zurueckzukehren.</p>
+        <p class="quote">"Giving mankind a fish vs teaching it to breathe"</p>
+    </section>
+    <section class="developer-section">
+        <h3>Softwareentwickler gesucht</h3>
+        <p>Wir suchen leidenschaftliche Entwickler, die an diesem Projekt mitwirken moechten. Erfahrung mit Audio-Processing, Machine Learning oder Mobile Development erwuenscht.</p>
+        <p>Dieses Projekt koennte Leben retten. Seien Sie Teil davon.</p>
+        <p style="margin-top:2rem"><a href="mailto:cheaperthanabullet@tutanota.com">cheaperthanabullet@tutanota.com</a></p>
+    </section>
+    <section class="mental-health">
+        <h3>Sei mutig und nimm Hilfe an</h3>
+        <p class="subtitle">Du bist nicht allein</p>
+        <p>Wenn du dich in einer Krise befindest, zoegere nicht, professionelle Hilfe zu suchen.</p>
+        <div class="resources">
+            <div class="resource-card"><h4>Telefonseelsorge</h4><p>0800 111 0 111</p><p>0800 111 0 222</p><p style="color:#888;font-size:0.9rem">Kostenlos, 24/7</p></div>
+            <div class="resource-card"><h4>Online-Beratung</h4><a href="https://online.telefonseelsorge.de">online.telefonseelsorge.de</a></div>
+            <div class="resource-card"><h4>Deutsche Depressionshilfe</h4><a href="https://www.deutsche-depressionshilfe.de">deutsche-depressionshilfe.de</a></div>
+        </div>
+    </section>
+    <section class="gofundme">
+        <h3>Unterstuetze das Projekt</h3>
+        <p>Hilf uns, diese lebensrettende Technologie zu entwickeln und frei zugaenglich zu machen.</p>
+        <a href="https://gofund.me/a6e22175" class="gofundme-btn" target="_blank">Zum GoFundMe</a>
+    </section>
+    <section class="quote-section">
+        <blockquote>"Giving mankind a fish vs teaching it to breathe"</blockquote>
+    </section>
+    <footer class="footer">
+        <h4>Kontakt</h4>
+        <p><a href="mailto:cheaperthanabullet@tutanota.com">cheaperthanabullet@tutanota.com</a> <a href="tel:+492204-5067746">+49 2204-5067746</a></p>
+        <p class="copyright">© 2024 Projekt Omniinspiration - Cheaper Than A Bullet</p>
+    </footer>
+    <script>
+        const video=document.getElementById('heroVideo');const staticLungs=document.getElementById('staticLungs');
+        video.addEventListener('loadeddata',function(){staticLungs.style.display='none';video.style.display='block'});
+        window.addEventListener('scroll',function(){if(video.duration){const scrollTop=window.pageYOffset;const docHeight=document.documentElement.scrollHeight-window.innerHeight;const scrollPercent=scrollTop/docHeight;const videoTime=Math.min(scrollPercent*2,1)*video.duration;video.currentTime=videoTime;const heroHeight=document.querySelector('.hero').offsetHeight;if(scrollTop>heroHeight*0.5){video.style.opacity=Math.max(0,1-(scrollTop-heroHeight*0.5)/(heroHeight*0.5))}else{video.style.opacity=0.9}}});
+    </script>
 </body>
 </html>
