@@ -8,12 +8,13 @@
     <style>
         *{margin:0;padding:0;box-sizing:border-box}
         body{font-family:'Open Sans',sans-serif;background:#e8e8e8;color:#333;line-height:1.8}
-        .lang-switcher{position:fixed;top:10px;right:20px;z-index:1000;display:flex;gap:8px}
-        .lang-btn{background:#2d5a3d;color:#fff;border:none;padding:6px 12px;cursor:pointer;font-size:12px;font-weight:bold;border-radius:3px}
-        .lang-btn:hover,.lang-btn.active{background:#70AD47}
-        .navbar{background:#f5f5f5;padding:1rem 2rem;display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;border-bottom:1px solid #ddd;position:relative;z-index:100}
+        .navbar{background:#f5f5f5;padding:0.8rem 2rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ddd;position:relative;z-index:100;flex-wrap:wrap;gap:1rem}
+        .nav-links{display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center}
         .navbar a{color:#2d5a3d;text-decoration:none;font-size:1rem;font-weight:600}
         .navbar a:hover{color:#70AD47}
+        .lang-switcher{display:flex;gap:5px}
+        .lang-btn{background:#2d5a3d;color:#fff;border:none;padding:5px 10px;cursor:pointer;font-size:11px;font-weight:bold;border-radius:3px}
+        .lang-btn:hover,.lang-btn.active{background:#70AD47}
         .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:4rem 2rem;position:relative;overflow:hidden}
         .hero-video-bg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);min-width:100%;min-height:100%;width:auto;height:auto;z-index:0;object-fit:cover}
         .hero-content{position:relative;z-index:1}
@@ -46,20 +47,23 @@
         .footer{background:#333;color:#fff;padding:3rem 2rem;text-align:center}
         .footer a{color:#70AD47;margin:0 1rem}
         .footer .copyright{margin-top:2rem;color:#888}
+        @media(max-width:768px){.navbar{flex-direction:column;gap:0.5rem}.nav-links{gap:0.8rem}.lang-switcher{margin-top:0.5rem}}
     </style>
 </head>
 <body>
-    <div class="lang-switcher">
-        <button class="lang-btn active" onclick="setLang('de')">DE</button>
-        <button class="lang-btn" onclick="setLang('en')">EN</button>
-        <button class="lang-btn" onclick="setLang('fr')">FR</button>
-        <button class="lang-btn" onclick="setLang('es')">ES</button>
-    </div>
     <nav class="navbar">
-        <a href="#home" data-de="Projekt Omniinspiration" data-en="Project Omniinspiration" data-fr="Projet Omniinspiration" data-es="Proyecto Omniinspiration">Projekt Omniinspiration</a>
-        <a href="#atemtracking" data-de="Atemtracking" data-en="Breath Tracking" data-fr="Suivi Respiratoire" data-es="Seguimiento Respiratorio">Atemtracking</a>
-        <a href="#entstehung" data-de="Über die Entstehung" data-en="About the Origin" data-fr="À propos de l'origine" data-es="Sobre el Origen">Über die Entstehung</a>
-        <a href="#support" data-de="Unterstützen" data-en="Support" data-fr="Soutenir" data-es="Apoyar">Unterstützen</a>
+        <div class="nav-links">
+            <a href="#home" data-de="Projekt Omniinspiration" data-en="Project Omniinspiration" data-fr="Projet Omniinspiration" data-es="Proyecto Omniinspiration">Projekt Omniinspiration</a>
+            <a href="#atemtracking" data-de="Atemtracking" data-en="Breath Tracking" data-fr="Suivi Respiratoire" data-es="Seguimiento Respiratorio">Atemtracking</a>
+            <a href="#entstehung" data-de="Über die Entstehung" data-en="About the Origin" data-fr="À propos de l'origine" data-es="Sobre el Origen">Über die Entstehung</a>
+            <a href="#support" data-de="Unterstützen" data-en="Support" data-fr="Soutenir" data-es="Apoyar">Unterstützen</a>
+        </div>
+        <div class="lang-switcher">
+            <button class="lang-btn active" onclick="setLang('de')">DE</button>
+            <button class="lang-btn" onclick="setLang('en')">EN</button>
+            <button class="lang-btn" onclick="setLang('fr')">FR</button>
+            <button class="lang-btn" onclick="setLang('es')">ES</button>
+        </div>
     </nav>
     <section class="hero" id="home">
         <video class="hero-video-bg" autoplay loop muted playsinline><source src="Goldilungsvid2.mp4" type="video/mp4"></video>
@@ -120,122 +124,5 @@
             });
         }
     </script>
-</body>
-</html><!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projekt Omniinspiration - Cheaper Than A Bullet</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Open Sans',sans-serif;background:#e8e8e8;color:#333;line-height:1.8}
-        .navbar{background:#f5f5f5;padding:1rem 2rem;display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;border-bottom:1px solid #ddd;position:relative;z-index:100}
-        .navbar a{color:#2d5a3d;text-decoration:none;font-size:1rem;font-weight:600}
-        .navbar a:hover{color:#70AD47}
-        .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:4rem 2rem;position:relative;overflow:hidden}
-        .hero-video-bg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);min-width:100%;min-height:100%;width:auto;height:auto;z-index:0;object-fit:cover}
-        .hero-content{position:relative;z-index:1}
-        .header-svg{width:700px;max-width:95%;margin-bottom:0.5rem}
-        section{padding:4rem 2rem;max-width:900px;margin:0 auto}
-        h3{font-family:'Open Sans',sans-serif;font-size:1.6rem;color:#2d5a3d;margin-bottom:1.5rem;font-weight:600}
-        p{margin-bottom:1.5rem;font-size:1.05rem;text-align:justify;color:#333}
-        .hashtag{color:#2d5a3d;font-weight:bold}
-        .cycle-section{text-align:center;padding:4rem 2rem;background:#f5f5f5;max-width:100%}
-        .cycle-section h3,.cycle-section p{max-width:900px;margin:0 auto 1.5rem}
-        .cycle-section p{text-align:center}
-        .cycle-image{max-width:100%;width:500px;margin:2rem auto}
-        #atemtracking .quote{text-align:center;font-style:italic;color:#666;margin-top:2rem}
-        .developer-section{background:#2d5a3d;color:#fff;padding:4rem 2rem;text-align:center;max-width:100%}
-        .developer-section h3{color:#70AD47}
-        .developer-section p{color:#fff;text-align:center;max-width:700px;margin:0 auto 1.5rem}
-        .developer-section a{color:#70AD47;text-decoration:none}
-        .mental-health{background:#f0f0f0;padding:4rem 2rem;text-align:center;max-width:100%}
-        .mental-health h3{color:#2d5a3d;font-size:1.8rem}
-        .mental-health .subtitle{color:#666;font-size:1.2rem;margin-bottom:2rem}
-        .resources{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-top:2rem}
-        .resource-card{background:#fff;padding:2rem;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.1);min-width:250px}
-        .resource-card h4{color:#2d5a3d;margin-bottom:1rem}
-        .resource-card a{color:#70AD47}
-        .gofundme{background:#d4a000;color:#fff;text-align:center;padding:4rem 2rem;max-width:100%}
-        .gofundme h3{color:#fff;font-size:1.8rem}
-        .gofundme p{color:#fff;text-align:center}
-        .gofundme-btn{display:inline-block;background:#2d5a3d;color:#fff;padding:1rem 3rem;text-decoration:none;font-weight:bold;border-radius:4px;margin-top:1rem}
-        .gofundme-btn:hover{background:#1a3d28}
-        .quote-section{text-align:center;padding:4rem 2rem;background:#e8e8e8}
-        .quote-section blockquote{font-size:1.5rem;font-style:italic;color:#2d5a3d}
-        .footer{background:#333;color:#fff;padding:3rem 2rem;text-align:center}
-        .footer a{color:#70AD47;margin:0 1rem}
-        .footer .copyright{margin-top:2rem;color:#888}
-        @media(max-width:768px){.header-svg{width:95%}.navbar{gap:1rem}.navbar a{font-size:0.85rem}}
-    </style>
-</head>
-<body>
-    <nav class="navbar">
-        <a href="#home">Projekt Omniinspiration</a>
-        <a href="#atemtracking">Atemtracking Via Audio</a>
-        <a href="#entstehung">Ueber die Entstehung</a>
-        <a href="#sangha">Sangha Buddah</a>
-        <a href="#vollendung">Vollendung</a>
-    </nav>
-    <section class="hero" id="home">
-        <video class="hero-video-bg" autoplay loop muted playsinline>
-            <source src="Goldilungsvid2.mp4" type="video/mp4">
-        </video>
-        <div class="hero-content">
-            <svg class="header-svg" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
-                <text x="400" y="70" text-anchor="middle" fill="#70AD47" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="bold" letter-spacing="8">PROJECT</text>
-                <text x="400" y="150" text-anchor="middle" fill="#70AD47" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="bold" letter-spacing="6">OMNIINSPIRATION</text>
-            </svg>
-        </div>
-    </section>
-    <section id="entstehung">
-        <h3>Depressionen sind heilbar.</h3>
-        <p>Leider bewegt sich bislang die Effektivitaet von Antidepressiva mehreren Studien zufolge etwa im gleichen Wirkungsbereich wie dem von Placebos.</p>
-        <p>Wesentlich staerkere positive Effekte haben Ergotherapeutisch-/Sportliche-Programme sowie Achtsamkeit-/Meditationstrainings vorzuweisen.</p>
-        <p>Was folgt, ist der Versuch ueber eine Moeglichkeit der Depressionsbekaempfung zu informieren, die nicht nur effektiv, sondern gleichzeitig <span class="hashtag">#cheaperthanabullet</span> ist.</p>
-    </section>
-    <section class="cycle-section">
-        <h3>Der negative Kreislauf</h3>
-        <p>Depressionen stehen im Zusammenhang mit einem Teufelskreis:</p>
-        <img src="NegativSpirale1.png" alt="Negativer Kreislauf der Depression" class="cycle-image">
-        <p><strong>Low Serotonin → Emotional Stress → Strained Breath → Low Blood Oxygen → Low Serotonin...</strong></p>
-    </section>
-    <section id="atemtracking">
-        <h3>Atemtracking Via Audio</h3>
-        <p>Unsere Technologie nutzt das Mikrofon Ihres Smartphones, um Ihre Atemmuster zu analysieren - ohne spezielle Hardware, ohne teure Sensoren.</p>
-        <p>Die App erkennt, wann Sie flach atmen, und gibt Ihnen sanfte Hinweise, um zu tieferer, gesuenderer Atmung zurueckzukehren.</p>
-        <p class="quote">"Giving mankind a fish vs teaching it to breathe"</p>
-    </section>
-    <section class="developer-section">
-        <h3>Softwareentwickler gesucht</h3>
-        <p>Wir suchen leidenschaftliche Entwickler, die an diesem Projekt mitwirken moechten. Erfahrung mit Audio-Processing, Machine Learning oder Mobile Development erwuenscht.</p>
-        <p>Dieses Projekt koennte Leben retten. Seien Sie Teil davon.</p>
-        <p style="margin-top:2rem"><a href="mailto:cheaperthanabullet@tutanota.com">cheaperthanabullet@tutanota.com</a></p>
-    </section>
-    <section class="mental-health">
-        <h3>Sei mutig und nimm Hilfe an</h3>
-        <p class="subtitle">Du bist nicht allein</p>
-        <p>Wenn du dich in einer Krise befindest, zoegere nicht, professionelle Hilfe zu suchen.</p>
-        <div class="resources">
-            <div class="resource-card"><h4>Telefonseelsorge</h4><p>0800 111 0 111</p><p>0800 111 0 222</p><p style="color:#888;font-size:0.9rem">Kostenlos, 24/7</p></div>
-            <div class="resource-card"><h4>Online-Beratung</h4><a href="https://online.telefonseelsorge.de">online.telefonseelsorge.de</a></div>
-            <div class="resource-card"><h4>Deutsche Depressionshilfe</h4><a href="https://www.deutsche-depressionshilfe.de">deutsche-depressionshilfe.de</a></div>
-        </div>
-    </section>
-    <section class="gofundme">
-        <h3>Unterstuetze das Projekt</h3>
-        <p>Hilf uns, diese lebensrettende Technologie zu entwickeln und frei zugaenglich zu machen.</p>
-        <a href="https://gofund.me/a6e22175" class="gofundme-btn" target="_blank">Zum GoFundMe</a>
-    </section>
-    <section class="quote-section">
-        <blockquote>"Giving mankind a fish vs teaching it to breathe"</blockquote>
-    </section>
-    <footer class="footer">
-        <h4>Kontakt</h4>
-        <p><a href="mailto:cheaperthanabullet@tutanota.com">cheaperthanabullet@tutanota.com</a> <a href="tel:+492204-5067746">+49 2204-5067746</a></p>
-        <p class="copyright">© 2024 Projekt Omniinspiration - Cheaper Than A Bullet</p>
-    </footer>
 </body>
 </html>
