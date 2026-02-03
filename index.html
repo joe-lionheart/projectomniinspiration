@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projekt Omniinspiration - Cheaper Than A Bullet</title>
-    <link href="https://fonts.cdnfonts.com/css/goudy-stout" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         *{margin:0;padding:0;box-sizing:border-box}
@@ -15,8 +14,7 @@
         .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:4rem 2rem;position:relative;background:linear-gradient(to bottom,#e8e8e8,#f0f0f0)}
         .hero-video{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:55%;max-width:550px;z-index:0;opacity:0.9;pointer-events:none}
         .golden-lungs{width:380px;max-width:80%;margin-bottom:2rem;z-index:1;position:relative}
-        .hero h1{font-family:'Goudy Stout',serif;font-size:3.5rem;color:#70AD47;text-transform:uppercase;letter-spacing:8px;margin-bottom:0.5rem;z-index:1;position:relative;text-shadow:2px 2px 4px rgba(255,255,255,0.8)}
-        .hero h2{font-family:'Goudy Stout',serif;font-size:2.5rem;color:#70AD47;text-transform:uppercase;letter-spacing:6px;z-index:1;position:relative;text-shadow:2px 2px 4px rgba(255,255,255,0.8)}
+        .header-svg{width:600px;max-width:90%;z-index:1;position:relative;margin-bottom:0.5rem}
         section{padding:4rem 2rem;max-width:900px;margin:0 auto}
         h3{font-family:'Open Sans',sans-serif;font-size:1.6rem;color:#2d5a3d;margin-bottom:1.5rem;font-weight:600}
         p{margin-bottom:1.5rem;font-size:1.05rem;text-align:justify;color:#333}
@@ -47,7 +45,7 @@
         .footer{background:#333;color:#fff;padding:3rem 2rem;text-align:center}
         .footer a{color:#70AD47;margin:0 1rem}
         .footer .copyright{margin-top:2rem;color:#888}
-        @media(max-width:768px){.hero h1{font-size:2rem;letter-spacing:4px}.hero h2{font-size:1.3rem;letter-spacing:2px}.navbar{gap:1rem}.navbar a{font-size:0.85rem}}
+        @media(max-width:768px){.header-svg{width:90%}.navbar{gap:1rem}.navbar a{font-size:0.85rem}}
     </style>
 </head>
 <body>
@@ -61,8 +59,10 @@
     <section class="hero" id="home">
         <video id="heroVideo" class="hero-video" muted playsinline><source src="Goldilungsvid2.mp4" type="video/mp4"></video>
         <img src="goldylungs.png" alt="Golden Lungs" class="golden-lungs" id="staticLungs">
-        <h1>Project</h1>
-        <h2>Omniinspiration</h2>
+        <svg class="header-svg" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+            <text x="400" y="70" text-anchor="middle" fill="#70AD47" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="bold" letter-spacing="8">PROJECT</text>
+            <text x="400" y="150" text-anchor="middle" fill="#70AD47" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="bold" letter-spacing="6">OMNIINSPIRATION</text>
+        </svg>
     </section>
     <section id="entstehung">
         <h3>Depressionen sind heilbar.</h3>
