@@ -8,13 +8,13 @@
     <style>
         *{margin:0;padding:0;box-sizing:border-box}
         body{font-family:'Open Sans',sans-serif;background:#e8e8e8;color:#333;line-height:1.8}
-        .navbar{background:#f5f5f5;padding:1rem 2rem;display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;border-bottom:1px solid #ddd}
+        .navbar{background:#f5f5f5;padding:1rem 2rem;display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;border-bottom:1px solid #ddd;position:relative;z-index:100}
         .navbar a{color:#2d5a3d;text-decoration:none;font-size:1rem;font-weight:600}
         .navbar a:hover{color:#70AD47}
-        .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:4rem 2rem;position:relative;background:linear-gradient(to bottom,#e8e8e8,#f0f0f0)}
-        .hero-video{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:55%;max-width:550px;z-index:0;opacity:0.9;pointer-events:none}
-        .golden-lungs{width:380px;max-width:80%;margin-bottom:2rem;z-index:1;position:relative}
-        .header-svg{width:600px;max-width:90%;z-index:1;position:relative;margin-bottom:0.5rem}
+        .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:4rem 2rem;position:relative;overflow:hidden}
+        .hero-video-bg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);min-width:100%;min-height:100%;width:auto;height:auto;z-index:0;object-fit:cover}
+        .hero-content{position:relative;z-index:1}
+        .header-svg{width:700px;max-width:95%;margin-bottom:0.5rem}
         section{padding:4rem 2rem;max-width:900px;margin:0 auto}
         h3{font-family:'Open Sans',sans-serif;font-size:1.6rem;color:#2d5a3d;margin-bottom:1.5rem;font-weight:600}
         p{margin-bottom:1.5rem;font-size:1.05rem;text-align:justify;color:#333}
@@ -45,7 +45,7 @@
         .footer{background:#333;color:#fff;padding:3rem 2rem;text-align:center}
         .footer a{color:#70AD47;margin:0 1rem}
         .footer .copyright{margin-top:2rem;color:#888}
-        @media(max-width:768px){.header-svg{width:90%}.navbar{gap:1rem}.navbar a{font-size:0.85rem}}
+        @media(max-width:768px){.header-svg{width:95%}.navbar{gap:1rem}.navbar a{font-size:0.85rem}}
     </style>
 </head>
 <body>
@@ -57,12 +57,15 @@
         <a href="#vollendung">Vollendung</a>
     </nav>
     <section class="hero" id="home">
-        <video id="heroVideo" class="hero-video" muted playsinline><source src="Goldilungsvid2.mp4" type="video/mp4"></video>
-        <img src="goldylungs.png" alt="Golden Lungs" class="golden-lungs" id="staticLungs">
-        <svg class="header-svg" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
-            <text x="400" y="70" text-anchor="middle" fill="#70AD47" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="bold" letter-spacing="8">PROJECT</text>
-            <text x="400" y="150" text-anchor="middle" fill="#70AD47" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="bold" letter-spacing="6">OMNIINSPIRATION</text>
-        </svg>
+        <video class="hero-video-bg" autoplay loop muted playsinline>
+            <source src="Goldilungsvid2.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <svg class="header-svg" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+                <text x="400" y="70" text-anchor="middle" fill="#70AD47" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="bold" letter-spacing="8">PROJECT</text>
+                <text x="400" y="150" text-anchor="middle" fill="#70AD47" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="bold" letter-spacing="6">OMNIINSPIRATION</text>
+            </svg>
+        </div>
     </section>
     <section id="entstehung">
         <h3>Depressionen sind heilbar.</h3>
@@ -111,10 +114,5 @@
         <p><a href="mailto:cheaperthanabullet@tutanota.com">cheaperthanabullet@tutanota.com</a> <a href="tel:+492204-5067746">+49 2204-5067746</a></p>
         <p class="copyright">© 2024 Projekt Omniinspiration - Cheaper Than A Bullet</p>
     </footer>
-    <script>
-        const video=document.getElementById('heroVideo');const staticLungs=document.getElementById('staticLungs');
-        video.addEventListener('loadeddata',function(){staticLungs.style.display='none';video.style.display='block'});
-        window.addEventListener('scroll',function(){if(video.duration){const scrollTop=window.pageYOffset;const docHeight=document.documentElement.scrollHeight-window.innerHeight;const scrollPercent=scrollTop/docHeight;const videoTime=Math.min(scrollPercent*2,1)*video.duration;video.currentTime=videoTime;const heroHeight=document.querySelector('.hero').offsetHeight;if(scrollTop>heroHeight*0.5){video.style.opacity=Math.max(0,1-(scrollTop-heroHeight*0.5)/(heroHeight*0.5))}else{video.style.opacity=0.9}}});
-    </script>
 </body>
 </html>
